@@ -3,8 +3,11 @@
 
     <string name="list">List</string>
     <string name="grid">Grid</string>
+    <string name="abouat">About</string>
     <string name="heroes_name">Nama Pahlawan</string>
     <string name="description">Deskripsi</string>
+    <string name="about">Fadly Ramdhani</string>
+    <string name="about2">fadlicaos@gmail.com</string>
     <string-array name="data_name">
         <item>Burung Merpati</item>
         <item>Burung Rajawali</item>

@@ -52,13 +52,13 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_list -> {
-                rvHeroes.layoutManager = LinearLayoutManager(this)
+            R.id.abouat -> {
+               intent = About()
+                startActivity(intent)
             }
-            R.id.action_grid -> {
-                rvHeroes.layoutManager = GridLayoutManager(this, 2)
-            }
+
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
