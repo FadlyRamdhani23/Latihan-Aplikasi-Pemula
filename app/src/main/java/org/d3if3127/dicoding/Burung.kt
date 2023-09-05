@@ -4,8 +4,9 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Hero(
+data class Burung(
     val name: String,
     val description: String,
-    val photo: Int
+    val photo: Int,
+    val makanan :String
 ) : Parcelable

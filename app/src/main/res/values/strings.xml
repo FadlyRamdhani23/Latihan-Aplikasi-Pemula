@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyRecyclerView</string>
+    <string name="app_name">ANEKA BURUNG</string>
 
     <string name="list">List</string>
     <string name="grid">Grid</string>
@@ -10,6 +10,19 @@
     <string name="about2">fadlicaos@gmail.com</string>
     <string name="about3">Deskripsi</string>
     <string name="contoh">.................</string>
+    <string name="makanan">makanan</string>
+    <string-array name="data_makanan">
+        <item>Merpati umumnya memakan biji-bijian, terutama biji-bijian keras seperti jagung, kacang polong, dan gandum. Mereka juga sering memakan serpihan roti, sisa makanan manusia, dan dedaunan kecil.</item>
+        <item>Rajawali adalah pemangsa yang biasanya memakan ikan, burung, mamalia kecil, dan bangkai. Mereka adalah pemakan karnivora yang kuat.</item>
+        <item>Kakatua adalah burung omnivora yang memakan berbagai jenis makanan, termasuk biji-bijian, buah-buahan, sayuran, dan kadang-kadang serangga.</item>
+        <item> Kutilang umumnya memakan buah-buahan, nektar bunga, serangga kecil, dan beberapa jenis makanan nabati lainnya.</item>
+        <item>Burung hantu adalah pemangsa yang memakan hewan-hewan kecil seperti tikus, kelinci, dan serangga besar. Mereka adalah pemakan karnivora yang terampil.</item>
+        <item> Beo adalah burung omnivora yang memakan biji-bijian, buah-buahan, nektar, serangga, dan kadang-kadang makanan manusia seperti nasi dan roti.</item>
+        <item> Kenari adalah pemakan biji-bijian, terutama biji kenari, biji bunga matahari, dan biji bunga-bungaan lainnya. Mereka juga bisa diberi buah-buahan segar.</item>
+        <item>Burung cendrawasih umumnya memakan buah-buahan, nektar, serangga, dan kadang-kadang serangga kecil yang mereka temukan di hutan tropis.</item>
+        <item>Gagak adalah pemakan segalanya yang bisa mereka temukan. Diet mereka mencakup biji-bijian, bangkai, serangga, hewan-hewan kecil, dan makanan manusia.</item>
+        <item>Kolibri adalah pemakan nektar bunga yang sangat tergantung pada sumber makanan manis ini. Mereka juga memakan serangga kecil dan laba-laba untuk protein tambahan.</item>
+    </string-array>
     <string-array name="data_name">
         <item>Burung Merpati</item>
         <item>Burung Rajawali</item>

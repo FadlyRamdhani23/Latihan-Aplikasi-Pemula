@@ -6,46 +6,47 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var rvHeroes: RecyclerView
-    private val list = ArrayList<Hero>()
+    private lateinit var rvBurung: RecyclerView
+    private val list = ArrayList<Burung>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        rvHeroes = findViewById(R.id.rv_heroes)
-        rvHeroes.setHasFixedSize(true)
-        list.addAll(getListHeroes())
+        rvBurung = findViewById(R.id.rv_burung)
+        rvBurung.setHasFixedSize(true)
+        list.addAll(getListBurung())
         showRecyclerList()
     }
-    private fun getListHeroes(): ArrayList<Hero> {
+    private fun getListBurung(): ArrayList<Burung> {
         val dataName = resources.getStringArray(R.array.data_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
+        val dataMakanan = resources.getStringArray(R.array.data_makanan)
         val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
-        val listHero = ArrayList<Hero>()
+
+        val listBurung = ArrayList<Burung>()
         for (i in dataName.indices) {
-            val hero = Hero(dataName[i], dataDescription[i], dataPhoto.getResourceId(i, -1))
-            listHero.add(hero)
+            val Burung = Burung(dataName[i], dataDescription[i], dataPhoto.getResourceId(i, -1), dataMakanan[i])
+            listBurung.add(Burung)
         }
-        return listHero
+        return listBurung
     }
 
     private fun showRecyclerList() {
-        rvHeroes.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = ListHeroAdapter(list)
-        rvHeroes.adapter = listHeroAdapter
-        listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: Hero) {
-                showSelectedHero(data)
+        rvBurung.layoutManager = LinearLayoutManager(this)
+        val listBurungAdapter = ListBurungAdapter(list)
+        rvBurung.adapter = listBurungAdapter
+        listBurungAdapter.setOnItemClickCallback(object : ListBurungAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Burung) {
+                showSelectedBurung(data)
             }
         })
     }
-    private fun showSelectedHero(hero: Hero) {
-        Toast.makeText(this, "Kamu memilih " + hero.name, Toast.LENGTH_SHORT).show()
+    private fun showSelectedBurung(burung: Burung) {
+        Toast.makeText(this, "Kamu memilih " + burung.name, Toast.LENGTH_SHORT).show()
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
@@ -57,7 +58,6 @@ class MainActivity : AppCompatActivity() {
                 val moveIntent = Intent(this@MainActivity, About::class.java)
                 startActivity(moveIntent)
             }
-
         }
         return super.onOptionsItemSelected(item)
     }
