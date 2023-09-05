@@ -8,6 +8,8 @@
     <string name="description">Deskripsi</string>
     <string name="about">Fadly Ramdhani</string>
     <string name="about2">fadlicaos@gmail.com</string>
+    <string name="about3">Deskripsi</string>
+    <string name="contoh">.................</string>
     <string-array name="data_name">
         <item>Burung Merpati</item>
         <item>Burung Rajawali</item>

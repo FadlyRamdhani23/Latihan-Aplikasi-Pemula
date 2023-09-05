@@ -1,5 +1,6 @@
 package org.d3if3127.dicoding
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -53,8 +54,8 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.abouat -> {
-               intent = About()
-                startActivity(intent)
+                val moveIntent = Intent(this@MainActivity, About::class.java)
+                startActivity(moveIntent)
             }
 
         }
